@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "a",
+						"type": "uint256[]"
+					}
+				],
+				"name": "insertSort",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"insertSort(uint256[])": {
+					"notice": "10 控制流 if else for while do while 三元 break continue"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"08_variable/variableTest.sol": "variableTest"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"08_variable/variableTest.sol": {
+			"keccak256": "0x5f1ecb07c309ac483f667605623d97951b9a1f828aeccbf2634c8814e18b6752",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1302643317365e8e58e643e0c3801f53d80f67dbcc7bd88ee7008650314ce4e9",
+				"dweb:/ipfs/QmNopcnmzUXWU89gt7y7tu2aXpgiAkXs9kMxNUB4b29iQm"
+			]
+		}
+	},
+	"version": 1
+}
