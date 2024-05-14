@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "msg",
+						"type": "string"
+					}
+				],
+				"name": "e1",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "makeMoney",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"e1(string)": {
+					"notice": "19 receive fallback  receive() external payable{}  fallback() external payable{}"
+				}
+			},
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"19_eth/receive.sol": "receiveTest"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"19_eth/receive.sol": {
+			"keccak256": "0xcdfd10c9c754d8bacac5fe72f84a4f8ddab54b5007e5e9d6cf319b3a5bdfcbe4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1c672cab6db270b5f8321784e9516e2ed844da59e4170562ebf766ce3b1bd92f",
+				"dweb:/ipfs/QmUbth7doGhGW9LjzBwEQTskqVD3QjbUPiH3smJ4Fk9fwv"
+			]
+		}
+	},
+	"version": 1
+}
