@@ -22,6 +22,7 @@ contract Pair {
         factory = msg.sender;
     }
 
+    //这里不使用构造函数的考虑是  uniswap使用create2,构造函数不能有参数；create其实是允许构造函数传参的
     function initialize(address _token0, address _token1) external {
         require(msg.sender == factory, "UniswapV2: FORBIDDEN");
         token0 = _token0;
@@ -30,4 +31,18 @@ contract Pair {
 
 }
 
-//todo
+contract PairFactory {
+    mapping(address => mapping(address => address)) public getPair;
+    address[] public allPairs;
+
+    function creaePair(address tokenA, address tokenB) external returns (address pairAddr) {
+        Pair pair = new Pair();
+        pair.initialize(tokenA, tokenB);
+        pairAddr = address(pair);
+        allPairs.push(pairAddr);
+        getPair[tokenA][tokenB] = pairAddr;
+        getPair[tokenB][tokenA] = pairAddr;
+    }
+}
+
+
