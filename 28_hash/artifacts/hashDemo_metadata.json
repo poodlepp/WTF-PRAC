@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "28 单向 灵敏 高效 均一 抗碰撞  hash = kecaak256(data)",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"28_hash/hashDemo.sol": "hashDemo"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"28_hash/hashDemo.sol": {
+			"keccak256": "0xbeb64d438dc170f7294b53b9c8da10d93849e8e5b1d3ac6ce4639f5171c18e5a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5d7a60ae3a30f141235640e493ad7cdc3d3f45ee0b4fe60ea0757f73ee6a370a",
+				"dweb:/ipfs/QmbLVhL7fL4nFuUT6AMPoTzjjWDxmD48QV6CiJLGz66fzZ"
+			]
+		}
+	},
+	"version": 1
+}

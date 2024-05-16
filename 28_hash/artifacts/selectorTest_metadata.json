@@ -1,0 +1,147 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "sel",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "address",
+						"name": "aa",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bb",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "cc",
+						"type": "string"
+					}
+				],
+				"name": "callWithSignature",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "decode",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "ss",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "aa",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bb",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "cc",
+						"type": "string"
+					}
+				],
+				"name": "test",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testSelector",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "mSelector",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "29 selector ",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"28_hash/hashDemo.sol": "selectorTest"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"28_hash/hashDemo.sol": {
+			"keccak256": "0x383ae2004ac9ccc4a4ed546f4c1e54953b53a6f9f78c7eb874132c2edd94e5e3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4553d26b0637ab82c20b0cd82b93ec959c3a1c3712ed20f704995c7f2e267d2",
+				"dweb:/ipfs/QmZMJtJrimhGqjHxfufD5rRbyFWGP7qPbhUAkJ1HGSeDmV"
+			]
+		}
+	},
+	"version": 1
+}
