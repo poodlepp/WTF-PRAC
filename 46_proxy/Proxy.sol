@@ -9,6 +9,11 @@ contract Proxy {
         implementation = implementation_;
     }
 
+    function upgrade(address newImpl_) external returns  (bool success) {
+        implementation = newImpl_;
+        return true;
+    }
+
     /**
     * @dev 回调函数，将本合约的调用委托给 `implementation` 合约
     * 通过assembly，让回调函数也能有返回值
