@@ -122,6 +122,8 @@ contract variableTest {
      * 抽象合约
      * abstract
      * virtual
+     * 一般使用override 代表实现/重写；
+     * virtual  override 是可以同时使用的，重写父合约，同时允许子合约重写
      * 
      * interface 接口
      * external

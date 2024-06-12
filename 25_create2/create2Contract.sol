@@ -45,6 +45,11 @@ contract PairFactory2{
         require(tokenA != tokenB, 'IDENTICAL_ADDRESS');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA); 
         bytes32 salt = keccak256(abi.encodePacked(token0,token1));
+        /**
+         * 因为只有salt是无法自动获取的，这里需要手动传入
+         * 创建者地址，pair bytecode都可以拿到，所以不需要传入
+         * 这就是create2的快捷方式
+         */
         Pair pair = new Pair{salt: salt}();
         pair.initialize(tokenA, tokenB);
         pairAddr = address(pair);
@@ -56,6 +61,9 @@ contract PairFactory2{
 
 
 
+/**
+ * 上面把create2 透明化了，下面是手动复刻实际处理过程
+ */
 contract addrCalculate {
         // 提前计算pair合约地址
         function calculateAddr(address tokenA, address tokenB) public view returns(address predictedAddress){

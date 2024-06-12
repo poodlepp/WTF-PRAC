@@ -93,7 +93,7 @@ contract receiveTest{
      * 
      * 使用场景：
      * 代理合约
-     * 钻石 EIP2535 Diamonds
+     * 钻石 EIP2535 Diamonds，没有详细了解
      * 
      * 修改的事固定的slot，而不是去匹配变量名称
      * 有安全隐患

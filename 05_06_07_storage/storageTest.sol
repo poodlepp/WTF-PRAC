@@ -27,13 +27,12 @@ contract storageTest {
      * 06
      * 引用类型
      * array 
-     * 固定长度 uint[8]  bytes1[] address[100]
+     * 固定长度 uint[8]  bytes1[5] address[100]
      * 动态数组 uint[]   bytes1[]  address[]  bytes
      *
      * 创建数组
      * uint[] memory x = new uint[](3);
      * uint[] memory x = new uint[3];
-     * uint[] memory x = new uint[](0); 动态数组
      * 
      * 
      * 单字节数组   bytes 或者 bytes1[]  前者更推荐

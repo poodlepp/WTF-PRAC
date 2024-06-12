@@ -16,6 +16,8 @@ pragma solidity ^0.8.25;
  * 
  * ERC721仍在发展中  
  * 新的标准有  ERC721Enumerable   ERC721A
+ * ERC721A 支持一次交易以极低fee 铸造多个NFT；实际效果明显优于ERC721Enumerable
+ * 优化点： 删除重复存储，批量铸造来更新所有者余额&其他数据
  * 
  */
 
