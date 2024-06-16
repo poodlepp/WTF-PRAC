@@ -2,6 +2,13 @@
 
 pragma solidity ^0.8.25;
 
+/**
+ * 一次交易中执行多个函数调用，显著降低交易费用并提高吞吐量
+ * 
+ * @author 
+ * @notice 
+ */
+
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract MCERC20 is ERC20{
@@ -12,8 +19,7 @@ contract MCERC20 is ERC20{
     }
 }
 
-contract Multicall {
-    // Call结构体，包含目标合约target，是否允许调用失败allowFailure，和call data
+// Call结构体，包含目标合约target，是否允许调用失败allowFailure，和call data
     struct Call {
         address target;
         bool allowFailure;
@@ -25,6 +31,9 @@ contract Multicall {
         bool success;
         bytes returnData;
     }
+
+contract Multicall {
+    
 
     /// @notice 将多个调用（支持不同合约/不同方法/不同参数）合并到一次调用
     /// @param calls Call结构体组成的数组
