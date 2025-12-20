@@ -7,6 +7,9 @@ contract funcTest {
      * function name param 
      * internal external public private
      * pure view payable  (pure  view  都不耗费gas，pure不能读取合约数据)
+     * vitual override
+     * modifiers
      * returns ()
+     * function body
      */
 }

@@ -6,7 +6,7 @@ contract reloadTest {
     /**
      * 16 重载
      * function重载  是不同的selector
-     * （如果uint8  uint256  是有问题的）
+     * （如果uint8  uint256  有时是无法区分的，就会报错）
      * 
      * modifier 不可以重载
      */
@@ -29,14 +29,23 @@ contract reloadTest {
      * create2
      * arrays
      * 
+     * 特点	       Internal 库函数	        Public / External 库函数
+     *   部署方式	嵌入主合约，无需单独部署	必须单独部署，有独立地址
+     *   调用方式	JUMP (内部跳转)	DELEGATECALL (外部调用)
+     *   Gas 消耗	较低（没有调用开销）	较高（有跨合约开销）
+     *   存储参数	可以直接传递 storage 指针	必须通过复杂指令定位存储
      */
 
     /**
      * 18 import
-     * 
-     * 本地文件
-     * github
-     * npm
-     * 局部导入
+
+     * // 通过文件相对位置import
+        import './Yeye.sol';
+        // 通过`全局符号`导入特定的合约
+        import {Yeye} from './Yeye.sol';
+        // 通过网址引用
+        import 'https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol';
+        // npm  引用OpenZeppelin合约
+        import '@openzeppelin/contracts/access/Ownable.sol';
      */
 }

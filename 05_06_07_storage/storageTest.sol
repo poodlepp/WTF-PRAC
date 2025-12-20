@@ -19,7 +19,13 @@ contract storageTest {
      * 作用域
      * state variable  默认都是storage
      * local variable
-     * global variable (msg.sender, block.number, msg.data)
+     * global variable (msg.sender, block.number, msg.data, block.gaslimit, gasleft()..)
+     * 
+     * eth
+     * 单位
+     * wei  gwei   ether
+     * 
+     * 时间 精确换算
      */
 
 
@@ -54,11 +60,16 @@ contract storageTest {
 
     /**
      * 07
+     * 
+     * 变量都是有默认值的
+     * 
      * mapping(uint => address) public aaa;
      * storage
      * 不能用于入参 出参
      * 没有length 不存储真实的key，只是根据keccak256取数
      * 默认值就是0
+     * 
+     * delete会让变量回到初始值
      */
 
 }

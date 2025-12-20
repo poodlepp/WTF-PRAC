@@ -28,12 +28,14 @@ contract variableTest {
      * 可以节省gas，增加安全性
      *
      * constant
-     * 适用于  数值， string, bytes
+     * 适用于  数值， string, bytes address
      * 必须在声明时初始化，之后不可变
+     * bytes constant CONSTANT_BYTES = "BBB";
      *
      * immutable
-     * 适用于  数值
+     * 适用于  数值  address
      * 声明时或者构造函数中初始化
+     * uint256 public immutable IMMUTABLE_AA;
      */
 
     /**
@@ -71,6 +73,7 @@ contract variableTest {
      * 构造函数 修饰器
      * constructor 0.4.22 和现在的语法不同
      *
+     * modifier 
      */
     modifier onlyOwner() {
         require(msg.sender == msg.sender);
@@ -85,16 +88,18 @@ contract variableTest {
      *
      * topics
      * 第一个   事件的签名  keccak256
-     * indexed 最多三个 每个256bit
+     * indexed 最多三个 每个256bit; 如果非值类型 会计算keccak-256哈希 然后存储，会有数据丢失
      *
      * data  其他变量
+     * event Transfer(address indexed from, address indexed to, uint256 value);
+     * emit Transfer(from,to,amount);
      *
      */
 
     /**
      * 13
      * inheritance 继承
-     * virtual  override
+     * virtual并不是一定要被子合约继承  override
      *
      * contract baba  is  yeye
      *
@@ -109,7 +114,7 @@ contract variableTest {
      *
      * 调用父合约的函数
      * 1 Yeye.pop()
-     * 2 super.pop()  多重继承时 会使用最近的父合约（右边的）
+     * 2 super.pop()  多重继承时 会使用最近的父合约（右边的）（override(a,b,c) 这里的话就是c ）
      * 钻石继承  super.pop 会调用所有父合约function，逆序（右边爸爸 左边爸爸，爷爷。。。）
      */
 
@@ -124,7 +129,8 @@ contract variableTest {
      * interface 接口
      * external
      * bytes4 选择器，  函数签名
-     * 接口id (EIP165)
+     * 接口id (EIP165) 接口中所有方法abi进行异或等处理后生成的一个id;  用于方便其他人活着合约快捷判断是否实现某方法，提供某功能
+     * -- supportsInterface(bytes4 interfaceId)
      * ABI 接口  可以互转
      *
      */
