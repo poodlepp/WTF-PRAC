@@ -11,6 +11,7 @@ pragma solidity ^0.8.25;
  * 抗碰撞
  * 
  * hash = kecaak256(data)
+ * 读音 凯 查克
  */
 
 // contract hashDemo {
@@ -19,7 +20,7 @@ pragma solidity ^0.8.25;
 
 /**
  * 29 selector
- * 
+ * msg.data 是完整的calldata
  */
 
 contract selectorTest {
@@ -27,7 +28,8 @@ contract selectorTest {
     function test(address aa, uint256 bb, string calldata cc) external returns(string memory) {
         return "123445";
     }
-
+    // 签名计算  大部分类型参数都是直接算；
+    // struct也可以算 bytes4(keccak256("mappingParamSelector(address,(uint256,bytes),uint256[],uint8)"));
     function testSelector() external pure returns(bytes4 mSelector) {
         return bytes4(keccak256("test(address,uint256,string)"));
     }
@@ -53,7 +55,8 @@ contract selectorTest {
  * 合约创建 返回的就是合约
  * 
  * revert require 使用catch  Error(string memory reason)
- * assert 使用catch(bytes memory reason)
+ * panic错误 catch Panic(uint errorCode)
+ * assert revert()   require(false)   使用catch(bytes memory reason)
  * 
  * 
  */

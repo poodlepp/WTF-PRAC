@@ -16,6 +16,10 @@ pragma solidity ^0.8.25;
  * 
  * 解码
  * decode  需要注意写对解析的类型
+ * 
+ * staticcall 只读版本的call，应尽量使用其替代call
+ * 
+ * 只知道签名，不知道具体方法定义；也可以使用上述方法进行调用的
  */
 
 contract abiDemo {

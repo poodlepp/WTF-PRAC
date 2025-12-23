@@ -16,6 +16,19 @@ contract receiveTest{
      *   优先匹配对应payable函数，否则fallback
      * 2 msg.data为空 + 携带eth 
      *   优先receive  其次fallback
+     * 
+     * 触发fallback() 还是 receive()?
+                接收ETH
+                    |
+                msg.data是空？
+                    /  \
+                是    否
+                /      \
+        receive()存在?   fallback()
+                / \
+            是  否
+            /     \
+        receive()   fallback()
      */
 
     event e1(string msg);
@@ -65,6 +78,7 @@ contract receiveTest{
 
     /**
      * 22 
+
      * call 是 address 的低级成员函数 返回（bool,data）
      * 推荐使用call发送eth
      * 不推荐使用call 进行函数调用
@@ -95,7 +109,7 @@ contract receiveTest{
      * 代理合约
      * 钻石 EIP2535 Diamonds，没有详细了解
      * 
-     * 修改的事固定的slot，而不是去匹配变量名称
+     * 修改的是固定的slot，而不是去匹配变量名称
      * 有安全隐患
      */
 }

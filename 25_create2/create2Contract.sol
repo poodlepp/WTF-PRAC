@@ -80,3 +80,16 @@ contract addrCalculate {
             )))));
         }
 }
+
+
+/**
+ * 构造方法带参数的情况 也是可以计算的；
+ * Pair pair = new Pair{salt: salt}(address(this));
+ * predictedAddress = address(uint160(uint(keccak256(abi.encodePacked(
+                bytes1(0xff),
+                address(this),
+                salt,
+                keccak256(abi.encodePacked(type(Pair).creationCode, abi.encode(address(this))))
+            )))));
+
+ */
